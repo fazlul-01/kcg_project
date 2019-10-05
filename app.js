@@ -14,7 +14,7 @@ var express = require("express"),
 // });
 
 //mongoose database connection
-const url = 'mongodb+srv://fazlul:faszhul1219@cluster0-zhheo.mongodb.net/admin?retryWrites=true&w=majority';
+const url = 'mongodb+srv://fazlul:faszhul1219@cluster0-zzba4.mongodb.net/admin?retryWrites=true&w=majority';
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
