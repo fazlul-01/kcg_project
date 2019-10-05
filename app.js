@@ -14,17 +14,17 @@ var express = require("express"),
 // });
 
 //mongoose database connection
-// const url = 'mongodb+srv://fazlul:faszhul1219@cluster0-zzba4.mongodb.net/kcg';
-// mongoose.connect(url, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// });
-// //mongoose database connection
-// console.log(process.env.DATABASEURL);
-mongoose.connect(process.env.DATABASEURL, {
+const url = 'mongodb+srv://fazlul:faszhul1219@cluster0-zzba4.mongodb.net/kcg';
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
+// //mongoose database connection
+// console.log(process.env.DATABASEURL);
+// mongoose.connect(process.env.DATABASEURL, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
 
 
 //==================================================
