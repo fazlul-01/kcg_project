@@ -6,8 +6,15 @@ var express = require("express"),
     User = require("./models/user"),
     app = express();
 
-//mongoose
-const url = 'mongodb://localhost:27017/kcg';
+//mongoose local connection
+// const url = 'mongodb://localhost:27017/kcg';
+// mongoose.connect(url, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
+
+//mongoose database connection
+const url = 'mongodb+srv://fazlul:faszhul1219@cluster0-zhheo.mongodb.net/admin?retryWrites=true&w=majority';
 mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
