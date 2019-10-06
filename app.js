@@ -25,7 +25,8 @@ var express = require("express"),
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true
 // });
-mongoose.connect(process.env.DATABASEURL || "mongodb://localhost:27017/kcg", {
+console.log(process.env.DATABASEURL)
+mongoose.connect(process.env.DATABASEURL || "mongodb+srv://kcg:kcg123@cluster0-zzba4.mongodb.net/kcg", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).catch(error => handleError(error));
