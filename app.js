@@ -141,6 +141,6 @@ function isLogedIn(req, res, next) {
 //====================================================
 //listenting at port 3000...
 //===================================================
-app.listen(3000, function () {
+app.listen(process.env.PORT, process.env.IP, function () {
     console.log("staring the server...")
 })
