@@ -3,27 +3,43 @@
 
 <head>
     <title>Students Guide </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a href="/" class="navbar-brand">Students Guide</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
+            <a class="navbar-brand" href="/">Students Guide</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="justify-content-end collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav">
+
                     <% if(!currentUser){%>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/register">Sign Up</a></li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Sign up</a>
+                    </li>
                     <%} else{%>
-                    <li><a href="#">Hello,<%=currentUser.username%></a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li class="nav-item active">
+                        <a href="#" class="nav-link">Hello,<%=currentUser.username%></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
                     <%}%>
-                   
-                </ul>
-            </div>
+                    </ul>
+                 </div>
+            
         </div>
     </nav>

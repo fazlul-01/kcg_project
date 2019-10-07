@@ -25,7 +25,7 @@ var express = require("express"),
 //     useNewUrlParser: true,
 //     useUnifiedTopology: true
 // });
-console.log(process.env.DATABASEURL)
+// console.log(process.env.DATABASEURL)
 mongoose.connect(process.env.DATABASEURL || "mongodb+srv://kcg:kcg123@cluster0-zzba4.mongodb.net/kcg", {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -141,6 +141,9 @@ function isLogedIn(req, res, next) {
 //====================================================
 //listenting at port 3000...
 //===================================================
+// app.listen(3000, function () {
+//     console.log("staring the server...")
+// })
 app.listen(process.env.PORT, process.env.IP, function () {
     console.log("staring the server...")
 })
