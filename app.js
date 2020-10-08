@@ -113,7 +113,7 @@ app.get("/login", function (req, res) {
 app.post("/login", passport.authenticate("local", {
     successRedirect: "/index",
     failureRedirect: "/login"
-}), function (req, res) {});
+}), function (req, res) { });
 
 //logout routes
 app.get("/logout", function (req, res) {
@@ -147,9 +147,9 @@ function isLogedIn(req, res, next) {
 // app.listen(process.env.PORT, process.env.IP, function () {
 //     console.log("staring the server...")
 // })
-// Start the server
+// Start the server  
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}`);
-  console.log('Press Ctrl+C to quit.');
+    console.log(`App listening at port ${PORT}`);
+    console.log('Press Ctrl+C to quit.');
 });
